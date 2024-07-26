@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import { IInputTaskProps } from "../../Interfaces";

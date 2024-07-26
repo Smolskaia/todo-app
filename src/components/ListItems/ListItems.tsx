@@ -1,13 +1,19 @@
-import React, {FC} from "react";
+import { FC } from "react";
 import List from "@mui/material/List";
 import { ITask, ITaskListProps } from "../../Interfaces";
 import TodoTask from "./ListItem/ListItem";
 
-const TaskList: FC<ITaskListProps> = ({ tasks }) => {
+const TaskList: FC<ITaskListProps> = ({ tasks, completeTask }) => {
   return (
     <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
       {tasks.map((task: ITask, key: number) => {
-        return <TodoTask key={key} task={task}/>
+        return (
+          <TodoTask
+            key={key}
+            task={task}
+            completeTask={completeTask}
+          />
+        );
       })}
     </List>
   );

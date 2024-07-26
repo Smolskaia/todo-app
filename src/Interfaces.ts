@@ -1,6 +1,5 @@
 export interface ITask {
   taskName: string;
-  completed: boolean;
 }
 
 export interface IInputTaskProps {
@@ -14,4 +13,5 @@ export interface IButtonAddProps {
 
 export interface ITaskListProps {
   tasks: ITask[];
+  completeTask(taskNameToDelete: string): void;
 }
